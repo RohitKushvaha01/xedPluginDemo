@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlinAndroid)
 }
 
 android {
@@ -41,4 +41,5 @@ dependencies {
     implementation("io.github.Rosemoe.sora-editor:editor")?.let { runtimeOnly(it) }
     implementation("org.eclipse.lsp4j:org.eclipse.lsp4j:0.22.0")?.let { runtimeOnly(it) }
     implementation(files("../libs/xedPlugin.aar"))
+    
 }

@@ -11,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.XedPluginDemo"
-        tools:targetApi="31" />
+        tools:targetApi="31" >
+
+        <meta-data android:name="xedpluginAPI" android:value="1"/>
+
+        <!-- fully qualified class name that extends API class  -->
+        <meta-data android:name="EntryPoint" android:value="com.example.xedplugindemo.PluginDemo"/>
+    </application>
 
 
-    <meta-data android:name="xedpluginAPI" android:value="1"/>
 
-    <!-- fully qualified class name that extends API   -->
-    <meta-data android:name="EntryPoint" android:value="com.example.xedplugindemo.PluginDemo"/>
 
 </manifest>
