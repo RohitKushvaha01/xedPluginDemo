@@ -4,17 +4,23 @@ plugins {
 }
 
 android {
-    namespace = "com.example.xedplugindemo"
+    namespace = "com.rk.jvm"
     compileSdk = 34
+    
+    
+    
+    sourceSets {
+        getByName("main") {
+            jniLibs.srcDirs("src/main/jniLibs")
+        }
+    }
 
     defaultConfig {
-        applicationId = "com.example.xedplugindemo"
+        applicationId = "com.rk.jvm"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -36,10 +42,15 @@ android {
 }
 
 dependencies {
-    implementation(libs.material)?.let { runtimeOnly(it) }
-    implementation(platform("io.github.Rosemoe.sora-editor:bom:0.23.4"))?.let { runtimeOnly(it) }
-    implementation("io.github.Rosemoe.sora-editor:editor")?.let { runtimeOnly(it) }
-    implementation("org.eclipse.lsp4j:org.eclipse.lsp4j:0.22.0")?.let { runtimeOnly(it) }
+    //implementation(libs.material)?.let { runtimeOnly(it) }
+   // implementation(platform("io.github.Rosemoe.sora-editor:bom:0.23.4"))?.let { runtimeOnly(it) }
+    //implementation("io.github.Rosemoe.sora-editor:editor")?.let { runtimeOnly(it) }
+    //implementation("org.eclipse.lsp4j:org.eclipse.lsp4j:0.22.0")?.let { runtimeOnly(it) }
     implementation(files("../libs/xedPlugin.aar"))
+    compileOnly(libs.material)
+    compileOnly(platform("io.github.Rosemoe.sora-editor:bom:0.23.4"))
+    compileOnly("io.github.Rosemoe.sora-editor:editor")
+    compileOnly("org.eclipse.lsp4j:org.eclipse.lsp4j:0.22.0")
+    
     
 }

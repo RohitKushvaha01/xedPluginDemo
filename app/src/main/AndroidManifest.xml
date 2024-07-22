@@ -3,20 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="JVM_Xedplugin"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XedPluginDemo"
         tools:targetApi="31" >
 
         <meta-data android:name="xedpluginAPI" android:value="1"/>
 
         <!-- fully qualified class name that extends API class  -->
-        <meta-data android:name="EntryPoint" android:value="com.example.xedplugindemo.PluginDemo"/>
+        <meta-data android:name="EntryPoint" android:value="com.rk.jvm.PluginMain"/>
     </application>
 
 
